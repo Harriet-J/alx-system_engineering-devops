@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check if olleh file exists
+if [ -f olleh ]; then
+    # Step 1: Get the permissions of olleh
+    olleh_permissions=$(stat -c "%a" olleh)
+
+    # Step 2: Apply the permissions to hello
+    chmod ${olleh_permissions} hello
+else
+    echo "Error: olleh file not found."
+    exit 1
+fi
