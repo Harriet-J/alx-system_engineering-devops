@@ -1,2 +1,2 @@
 #!/bin/bash
-[ -f "iacta" ] && head -n 3 iacta | tail -n 1 || echo "File 'iacta' not found."
+sed -n '3p' iacta
