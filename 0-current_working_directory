@@ -1,7 +1,0 @@
-#!/bin/bash
-# Script: 0-current_working_directory
-# Description: Prints the absolute path name of the current working directory.
-
-# Using the 'pwd' command to print the absolute path of the current working directory.
-pwd
-
