@@ -1,0 +1,16 @@
+#!usr/bin/env bash
+#sript that pings IP address passed as an arguement
+
+#ip variable
+IP="${1}"
+
+#FILE VARIABLE
+fn=$(basename "${BASH_SOURCE[@]}")
+
+if ! [ "$IP" ]; then 
+	echo "Usage: ${fn} {IP_ADDRESS}"
+
+else
+	ping -c 5 "${IP}"
+
+fi
