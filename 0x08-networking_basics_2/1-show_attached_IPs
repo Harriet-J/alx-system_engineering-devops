@@ -2,4 +2,4 @@
 # Displays all active IPv4 addresses on the machine.
 
 # Extract IPv4 addresses using the `ip` command, filter for active interfaces, and clean up formatting
-ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | sort -u
