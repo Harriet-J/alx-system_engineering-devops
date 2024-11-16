@@ -1,16 +1,17 @@
-#!usr/bin/env bash
-#sript that pings IP address passed as an arguement
+#!/usr/bin/env bash
+# Script that pings an IP address passed as an argument
 
-#ip variable
+# IP variable
 IP="${1}"
 
-#FILE VARIABLE
-fn=$(basename "${BASH_SOURCE[@]}")
+# File name variable
+fn=$(basename "${BASH_SOURCE[0]}")
 
-if ! [ "$IP" ]; then 
-	echo "Usage: ${fn} {IP_ADDRESS}"
-
+# Check if IP is provided
+if [ -z "$IP" ]; then
+    echo "Usage: ${fn} {IP_ADDRESS}"
+    exit 1
 else
-	ping -c 5 "${IP}"
-
+    # Ping the IP 5 times
+    ping -c 5 "${IP}"
 fi
